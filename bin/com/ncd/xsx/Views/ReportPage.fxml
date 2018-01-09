@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane fx:id="rootStackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+         	<JFXDialog fx:id="LogDialog">
+               <JFXDialogLayout>
+					<heading>
+						<Label fx:id="LogDialogHead" />
+					</heading>
+					<body>
+						 <Label fx:id="LogDialogContent" />
+					</body>
+					<actions>
+						<JFXButton fx:id="acceptButton" styleClass="dialog-accept">关闭</JFXButton>
+					</actions>
+				</JFXDialogLayout>
+            </JFXDialog>
+            <VBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <Label text="POCT检验报告（示例）">
+                     <font>
+                        <Font name="FangSong" size="24.0" />
+                     </font>
+                  </Label>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0">
+                           <children>
+                              <Label text="姓名 ：">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="nameTextField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label text="病案号 ：" />
+                              <JFXTextField fx:id="sickIdTextField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0" GridPane.columnIndex="2">
+                           <children>
+                              <Label text="样本类型 ：" />
+                              <JFXTextField fx:id="bloodTypeTextField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0" GridPane.columnIndex="3">
+                           <children>
+                              <Label text="送检医生 ：" />
+                              <JFXTextField fx:id="sendDoctorTextField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="性别 ：" />
+                              <JFXTextField fx:id="sexTextField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="科   别 ：" />
+                              <JFXTextField fx:id="departmentTextField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="检验仪器 ：" />
+                              <JFXTextField fx:id="deviceTextField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <children>
+                              <Label prefWidth="75.0" text="临床诊断 ：" />
+                              <JFXTextField fx:id="sickdescTextField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label text="年龄 ：" />
+                              <JFXTextField fx:id="ageTextField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label text="床   号 ：" />
+                              <JFXTextField fx:id="chuanghaoTextField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Label text="条码编号 ：" />
+                              <JFXTextField fx:id="barcodeTextField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <children>
+                              <Label prefWidth="75.0" text="采集时间 ：" />
+                              <JFXTextField fx:id="gettimeTextField" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <GridPane style="-fx-border-color: black; -fx-border-width: 1 1 1 0;">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="项目名称" />
+                              <Label text="缩写" GridPane.columnIndex="1" />
+                              <Label text="结果" GridPane.columnIndex="2" />
+                              <Label text="单位" GridPane.columnIndex="3" />
+                              <Label text="参考区间" GridPane.columnIndex="4" />
+                           </children>
+                        </GridPane>
+                        <GridPane style="-fx-border-color: black; -fx-border-width: 1 0 1 0;" GridPane.columnIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="项目名称" />
+                              <Label text="缩写" GridPane.columnIndex="1" />
+                              <Label text="结果" GridPane.columnIndex="2" />
+                              <Label text="单位" GridPane.columnIndex="3" />
+                              <Label text="参考区间" GridPane.columnIndex="4" />
+                           </children>
+                        </GridPane>
+                        <GridPane style="-fx-border-color: black; -fx-border-width: 0 1 1 0;" GridPane.rowIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="itemNameLabel" text="1" wrapText="true" />
+                              <Label fx:id="itemNameSLabel" text="2" wrapText="true" GridPane.columnIndex="1" />
+                              <Label fx:id="resultLabel" text="3" wrapText="true" GridPane.columnIndex="2" />
+                              <Label fx:id="danweiLabel" text="4" wrapText="true" GridPane.columnIndex="3" />
+                              <Label fx:id="normalLabel" text="5" wrapText="true" GridPane.columnIndex="4" />
+                           </children>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </GridPane>
+                        <GridPane style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <VBox prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0">
+                           <children>
+                              <Label text="备注 ：" />
+                              <JFXTextField fx:id="descTextField" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox spacing="100.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label text="接收时间 ：" />
+                                    <JFXTextField fx:id="recvTimeTextField" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label text="报告时间 ：" />
+                                    <JFXTextField fx:id="reportTimeTextField" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label text="检验者 ：" />
+                                    <JFXTextField fx:id="checkerTextField" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label text="审核者 ：" />
+                                    <JFXTextField fx:id="recheckerTextField" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <Label text="住：本报告单仅对此标本负责">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_RIGHT" spacing="35.0">
+                     <children>
+                        <JFXButton fx:id="cancelButton" prefHeight="40.0" prefWidth="85.0" ripplerFill="#58d680" style="-fx-background-color: lightskyblue;" text="取    消">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="printfButton" prefHeight="40.0" prefWidth="85.0" ripplerFill="#58d680" style="-fx-background-color: lightskyblue;" text="打    印">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
